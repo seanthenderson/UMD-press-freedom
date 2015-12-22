@@ -1,1 +1,4 @@
 /* Style Overrides */
+#sidebar {
+	display: none;
+}
