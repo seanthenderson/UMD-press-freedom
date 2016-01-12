@@ -1,35 +1,85 @@
 <?php get_header(); ?>
 
-<div class="hero">
-	<h1>SITE TITLE</h1>
-	<div class="imprisoned-journalists-link">LINK to IMPRISONED JOURNALISTS LANDING PAGE</div>
-	<div class="slideshow">(SLIDESHOW)</div>
-	<div class="imprisoned-journalists-link">LINK to IMPRISONED JOURNALISTS LANDING PAGE</div>
-</div>
-<div class="featured-stories">	
-	<h1>FEATURED STORIES</h1>
-	<a href="article.html"><div class="featured-story">Featured Story</div></a>
-	<a href="article.html"><div class="featured-story">Featured Story</div></a>
-	<a href="article.html"><div class="featured-story">Featured Story</div></a>
-	<a href="article.html"><div class="featured-story">Featured Story</div></a>
-</div>
-<div class="featured-imprisoned-journalists">
-	<h1>FEATURED IMPRISONED JOURNALISTS</h1>
-	<div class="featured-imprisoned-journalist">Featured Imprisoned Journalist</div>
-	<div class="featured-imprisoned-journalist">Featured Imprisoned Journalist</div>
-</div>
-<div class="press-uncuffed-box">
-	<h2>FEATURE BOX FOR PRESS UNCUFFED CAMPAIGN</h2>
-</div>
-<div class="key-categories">
-	<h2>FEATURE BOX FOR KEY CATEGORIES</h2>
-</div>
-<div class="related-links">
-	<h1>Links to related sites</h1>
-	<a href="">Link to related site</a>
-	<a href="">Link to related site</a>
-	<a href="">Link to related site</a>
-	<a href="">Link to related site</a>
+<div class="page-wrapper homepage">
+
+	<div class="left-column">
+		<?php 
+			if (have_posts()) {
+				while (have_posts()) {
+					the_post(); 
+					 if (has_post_thumbnail() ) { ?>
+					     <div class="homepage-hero">
+					     	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>	    		
+							<div class="headline">
+								<?php the_title() ?>
+								<div class="subtitle"><?php the_field("subtitle"); ?></div>
+							</div>
+
+					     </div>
+					 <?php } 
+				} 
+			} 
+		?>
+		<div class="category">
+		 	<div class="category-image">thumbnail</div>
+			<div class="article-text">
+			 	<h2>Headline goes here</h2>
+			 	<h4>Subhead goes here</h3>
+			 	<div class="byline">
+			 		Byline goes here
+					<i class="fa fa-facebook-official"></i>
+					<i class="fa fa-twitter-square"></i>
+			 	</div>
+			 	<p>Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum.</p>
+			</div>
+		</div>
+		<div class="category">
+		 	<div class="category-image">thumbnail</div>
+			<div class="article-text">
+			 	<h2>Headline goes here</h2>
+			 	<h4>Subhead goes here</h3>
+			 	<div class="byline">
+			 		Byline goes here
+					<i class="fa fa-facebook-official"></i>
+					<i class="fa fa-twitter-square"></i>
+			 	</div>
+			 	<p>Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum. Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum.</p>
+			</div>
+		 </div>
+		 <div class="category">
+		 	<div class="category-image">thumbnail</div>
+			<div class="article-text">
+			 	<h2>Headline goes here</h2>
+			 	<h4>Subhead goes here</h3>
+			 	<div class="byline">
+			 		Byline goes here
+					<i class="fa fa-facebook-official"></i>
+					<i class="fa fa-twitter-square"></i>
+			 	</div>
+			 	<p>Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum. Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum. Primis vidisse tractatos an usu, pro et mundi aperiri malorum.</p>
+			</div>
+		 </div>
+		 <div class="category">
+		 	<div class="category-image">thumbnail</div>
+			<div class="article-text">
+			 	<h2>Headline goes here</h2>
+			 	<h4>Subhead goes here</h3>
+			 	<div class="byline">
+			 		Byline goes here
+					<i class="fa fa-facebook-official"></i>
+					<i class="fa fa-twitter-square"></i>
+			 	</div>
+			 	<p>Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex. Primis vidisse tractatos an usu, pro et mundi aperiri malorum. Vim euripidis reformidans ut. Ut has prompta temporibus ullamcorper, ne his rebum novum iisque, stet zril facilis mei ex.</p>
+			</div>
+		 </div>
+
+		 <section class="press-uncuffed">
+		 	<h2>Feature Box for Press Uncuffed Campaign</h2>
+		 </section>
+	</div>	
+
+	<?php get_sidebar(); ?>
+
 </div>
 
 <?php get_footer(); ?>
