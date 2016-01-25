@@ -1,7 +1,4 @@
 <?php 
-	// Hide admin bar
-	show_admin_bar(true);
-
 	// Turn on debugging
 	define( 'WP_DEBUG', true );
 
@@ -84,10 +81,30 @@
 		$args = array(
 			'id'    => 'support_links',
 			'title' => 'Support Links',
-			'href'  => 'Press-Freedom/wp-admin/post.php?post=30&action=edit',
+			'href'  => '/Press-Freedom/wp-admin/post.php?post=30&action=edit',
 			'meta'  => array('class' => 'support-links')
 		);
 		$wp_admin_bar->add_node($args);
 	}
+
+	// Add related links to admin menu
+	add_action('admin_bar_menu', 'related_links', 999);
+
+	function related_links($wp_admin_bar) {
+		$args = array(
+			'id'    => 'related_links',
+			'title' => 'Related Links',
+			'href'  => '/Press-Freedom/wp-admin/post.php?post=38&action=edit',
+			'meta'  => array('class' => 'related-links')
+		);
+		$wp_admin_bar->add_node($args);
+	}
+
+	// Add read more to post excerpt
+	function new_excerpt_more($more) {
+	    global $post;
+		return '<a class="moretag" href="'. get_permalink($post->ID) . '">...</a>';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

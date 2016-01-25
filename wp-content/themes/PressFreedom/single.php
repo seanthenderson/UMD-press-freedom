@@ -50,5 +50,8 @@
 		<?php endif; ?>
 	</div>	
 
-<?php get_sidebar(); ?>
+	<div class="right-column">
+		<?php get_sidebar(); ?>
+	</div>
+	
 <?php get_footer(); ?>

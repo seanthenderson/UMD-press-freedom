@@ -2,8 +2,8 @@
 <div class="page-wrapper category-page">
 
 	<div class="left-column">
-		 <h1><?php single_cat_title(); ?></h1>
-		 <?php 
+		<h1><?php single_cat_title(); ?></h1>
+		<?php 
 		 	$args = array(
 		 		'posts_per_page' => '4'
 		 	);
@@ -38,9 +38,11 @@
  					 </div>
 		 		<?php } 
 		 	} 
-		 ?>
+		?>
 	</div>	
 
-<?php get_sidebar(); ?>
+	<div class="right-column">
+		<?php get_sidebar(); ?>
+	</div>
 
 <?php get_footer(); ?>

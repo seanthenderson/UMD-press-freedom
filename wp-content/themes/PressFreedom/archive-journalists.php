@@ -19,11 +19,11 @@
 						<a href="<?php the_permalink(); ?>" class="journalist-card">	
 							<h2 class="name"><?php the_title(); ?></h2>
 							<h3 class="country"><?php the_field("country"); ?></h3>
-					 		<?php if (has_post_thumbnail()) { ?>
-					 			<div class="headshot">
-					 				<?php the_post_thumbnail(); ?>
-					 			</div>
-						 	<?php } ?>
+					 		<?php if (has_post_thumbnail()) { 
+			    				$image_array = wp_get_attachment_image_src(\get_post_thumbnail_id( $page_id ), 'optional-size' );
+			    				$url = $image_array[0]; ?>
+								<div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;"></div> 
+							<?php } ?>
 							<div class="days-jailed">
 								<?php the_title(); ?> has been in prison for
 								<span><?php days_in_jail(); ?></span>
@@ -40,7 +40,9 @@
 		</div>
 	</div>
 
-	<?php get_sidebar(); ?>
+	<div class="right-column">
+		<?php get_sidebar(); ?>
+	</div>
 
 </div>	
 

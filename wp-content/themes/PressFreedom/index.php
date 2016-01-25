@@ -6,14 +6,13 @@
 		<!-- Hero story -->
 		<?php 
 			$args = array(
-				'cat' => '2',
+				'cat' => '5',
 				'posts_per_page' => '1'
 			);
 			$hero = new WP_Query($args);
 			if ($hero->have_posts()) {
 				while ($hero->have_posts()) {
-					$hero->the_post(); 
-				 	if (in_category('homepage-featured', $post->ID)) { ?>
+					$hero->the_post(); ?>
 					    <a href="<?php the_permalink(); ?>">
 						    <div class="homepage-hero">
 						     	<?php the_post_thumbnail('large'); ?>	    		
@@ -23,14 +22,15 @@
 								</div>
 					    	</div>
 					    </a>
-				 	<?php }
-				} 
+				<?php } 
 			} 
 		?>
 
 		<!-- Featured stories -->
 		<?php 
 			$args = array(
+				'cat' => '6',
+				'category__not_in' => '5',
 				'posts_per_page' => '4'
 			);
 			$featured = new WP_Query($args);
@@ -39,20 +39,22 @@
 					$featured->the_post(); ?>
 					<?php if (!in_category(2)) { ?>
 					     <div class="category">
-			     		 	<div class="category-image">
-			     		 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small'); ?></a>
-			     			</div>
+					     	<?php if (has_post_thumbnail()) { ?>
+				     		 	<div class="category-image">
+				     		 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small'); ?></a>
+				     			</div>
+				     		<?php } ?>
 			     			<div class="article-text">
 			     			 	<h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
 			     			 	<h4><?php the_field("subtitle"); ?></h3>
 			     			 	<div class="byline">
 			     			 		<div class="featured-text-byline">
 			     			 			<?php if(function_exists('coauthors_posts_links')) { ?>
-			     			 				By <?php coauthors_posts_links(); 
+			     			 				By <?php coauthors_posts_links('display_name'); 
 			     			 			} else { ?>
 			     			 				By <?php get_the_author();
 			     			 			} ?>
-			     			 			</div>
+			     			 		</div>
 			     					<i class="fa fa-facebook-official"></i>
 			     					<i class="fa fa-twitter-square"></i>
 			     			 	</div>
@@ -69,7 +71,9 @@
 		 </section>
 	</div>	
 
-	<?php get_sidebar(); ?>
+	<div class="right-column">
+		<?php get_sidebar(); ?>
+	</div>
 
 </div>
 
