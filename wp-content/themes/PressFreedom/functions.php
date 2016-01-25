@@ -8,6 +8,15 @@
 	// Tell WP Super Cache & W3 Total Cache to not cache WPReadable requests
 	define( 'DONOTCACHEPAGE', true );
 
+	// Enqueue scripts and stylesheets
+	function pressfreedom_scripts() {
+		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', true);
+		wp_enqueue_script('jquery');
+		wp_register_script('main-js', get_template_directory_uri() . '/js/script.js', true);
+		wp_enqueue_script('main-js');
+	}
+	add_action('wp_enqueue_scripts', 'pressfreedom_scripts');
+
 	// Add featured image functionality
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'post-thumbnails' );
