@@ -20,7 +20,7 @@
 			<div class="counter">
 			 	Days in jail: <span><?php echo days_in_jail(); ?></span>
 			</div>
-			<div class="map-header"><?php the_title(); ?> is currently imprisoned in <?php the_field("country"); ?></div>
+			<div class="map-header"><?php the_title(); ?> is currently imprisoned in <?php the_field("country_where_imprisoned"); ?></div>
 			
 			<?php
 				$location = get_field("link_to_map");
@@ -108,12 +108,15 @@
 					$other_journalists->the_post(); ?>
 				    <a href="<?php the_permalink(); ?>">
 				    	<div class="other-journalist">
-						    <div class="headshot">
-				    	 		<?php if ( has_post_thumbnail() ) { 
-				    	 			the_post_thumbnail();
-				    		 	} ?>
-				    		 	<div class="name"><?php the_title(); ?></div>
-						    </div>
+			    			<?php 
+			    				if (has_post_thumbnail()) { 
+			        				$image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'optional-size' );
+			        				$url = $image_array[0]; ?>
+			    					<div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;">
+										<div class="name"><?php the_title(); ?></div>
+			    					</div> 
+			    				<?php }
+			    			?>
 						</div>
 				    </a>
 				<?php } 
@@ -128,5 +131,5 @@
 	<div class="right-column">
 		<?php get_sidebar(); ?>
 	</div>
-	
+
 <?php get_footer(); ?>

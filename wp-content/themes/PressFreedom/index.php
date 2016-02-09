@@ -6,22 +6,22 @@
 		<!-- Hero story -->
 		<?php 
 			$args = array(
-				'cat' => '5',
+				'category_name' => 'homepage-hero',
 				'posts_per_page' => '1'
 			);
 			$hero = new WP_Query($args);
 			if ($hero->have_posts()) {
 				while ($hero->have_posts()) {
 					$hero->the_post(); ?>
-					    <a href="<?php the_permalink(); ?>">
-						    <div class="homepage-hero">
-						     	<?php the_post_thumbnail('large'); ?>	    		
-								<div class="headline">
-									<?php the_title() ?>
-									<div class="subtitle"><?php the_field("subtitle"); ?></div>
-								</div>
-					    	</div>
-					    </a>
+				    <a href="<?php the_permalink(); ?>">
+					    <div class="homepage-hero">
+					     	<?php the_post_thumbnail('large'); ?>	    		
+							<div class="headline">
+								<?php the_title() ?>
+								<div class="subtitle"><?php the_field("subtitle"); ?></div>
+							</div>
+				    	</div>
+				    </a>
 				<?php } 
 			} 
 		?>
@@ -29,7 +29,7 @@
 		<!-- Featured stories -->
 		<?php 
 			$args = array(
-				'cat' => '6',
+				'category_name' => 'homepage-featured',
 				'category__not_in' => '5',
 				'posts_per_page' => '4'
 			);
