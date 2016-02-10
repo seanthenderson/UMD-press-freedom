@@ -21,7 +21,7 @@
 				<i class="fa fa-bars"></i>
 				<div class="site-logo"><a href="/Press-Freedom">SITE LOGO</a></div>
 				<div class="nav">
-					<div class="nav-option"><a href="/Press-Freedom/journalists">Imprisoned Journalists</a></div>
+					<?php wp_nav_menu('Header menu'); ?>
 				</div>
 				<div class="share-buttons">
 					<a href=""><i class="fa fa-facebook"></i></a>
