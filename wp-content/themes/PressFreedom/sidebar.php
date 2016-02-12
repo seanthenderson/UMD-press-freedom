@@ -18,7 +18,7 @@
 				    </div>
 				    <p><?php the_excerpt(); ?></p>
 				    <div class="days-jailed">
-				    	Days in jail: <span><?php echo days_in_jail(); ?></span>
+				    	DAYS IN JAIL: <span><?php echo days_in_jail(); ?></span>
 				    </div>
 				</div>
 		    </a>
