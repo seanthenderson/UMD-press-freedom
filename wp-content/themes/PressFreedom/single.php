@@ -17,16 +17,16 @@
 			</div>
 		 </div>
 
-		<?php include('includes/byline-box.php'); ?>
-
-		<div class="social-share">
-			<i class="fa fa-facebook"></i>
-			<i class="fa fa-twitter"></i>
-			<i class="fa fa-envelope"></i>
-		</div>
-
 		<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
+				<?php include('includes/byline-box.php'); ?>
+
+				<div class="social-share">
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-envelope"></i>
+				</div>
+
 				<?php the_content(); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
