@@ -4,7 +4,7 @@
 
 	<div class="left-column">
 		<h1 class="title">
-			<?php the_title() ?> &#8211; <?php the_field("country"); ?>
+			<?php the_title() ?><span class="country-name"> &#8211; <?php the_field("country"); ?></span>
 		</h1>
 		<div class="article-header">
 			<?php 
@@ -78,7 +78,7 @@
 			wp_reset_postdata(); ?>
 		</section>
 
-		<section class="other-journalists">
+		<div class="other-journalists">
 			<h2>Other Imprisoned Journalists</h2>
 			<?php $args = array(
 				'post_type' => 'journalists',
@@ -103,7 +103,7 @@
 				    </a>
 				<?php } 
 			} ?>
-		</section>
+		</div>
 
 		<section class="sharelines">
 			<h2>Twitter Sharelines</h2>

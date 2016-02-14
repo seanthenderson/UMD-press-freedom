@@ -20,7 +20,7 @@
 		<script type="text/javascript">
 		    var locations = [<?php while( $wp_query->have_posts() ){
 				$wp_query->the_post();
-		    	$location = get_field('link_to_map'); /
+		    	$location = get_field('link_to_map'); 
 			?>
 
 			['<?php the_title(); ?>', <?php echo $location['lat']; ?>, <?php echo $location['lng'];?>, <?php $NUM++ ?>],

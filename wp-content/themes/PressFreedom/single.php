@@ -24,7 +24,7 @@
 				<div class="social-share">
 					<i class="fa fa-facebook"></i>
 					<i class="fa fa-twitter"></i>
-					<i class="fa fa-envelope"></i>
+					<a href="mailto:?Subject=<?php the_title(); ?>" target="_top"><i class="fa fa-envelope"></i></a>
 				</div>
 
 				<?php the_content(); ?>
