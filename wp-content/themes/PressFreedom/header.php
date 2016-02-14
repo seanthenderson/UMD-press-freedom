@@ -8,6 +8,7 @@
 	<!--===== FONTS =====-->
 	<link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<!--===== STYLESHEETS ======-->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
@@ -19,7 +20,7 @@
 		<header>
 			<div class="header-wrapper">
 				<i class="fa fa-bars"></i>
-				<div class="site-logo"><a href="/Press-Freedom">SITE LOGO</a></div>
+				<div class="site-logo"><a href="/Press-Freedom">(SITE LOGO)</a></div>
 				<div class="nav">
 					<?php wp_nav_menu('Header menu'); ?>
 				</div>
