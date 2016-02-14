@@ -1,8 +1,11 @@
 
 <?php 
+	$current_post = get_queried_object();
 	$args = array(
 		'post_type' => 'journalists',
-		'posts_per_page' => '2'
+        'post__not_in' => [$current_post->ID],
+		'posts_per_page' => '2',
+		'orderby'       => 'rand',
 	);
 	$sidebar = new WP_Query($args);
 	if ($sidebar->have_posts()) {
@@ -10,16 +13,21 @@
 			$sidebar->the_post(); ?>
 		    <a href="<?php the_permalink(); ?>">
 		    	<div class="imprisoned-journalists-box">
-				    <h3><?php the_title(); ?></h3>
-				    <div class="headshot">
-		    	 		<?php if ( has_post_thumbnail() ) { 
-		    	 			the_post_thumbnail();
-		    		 	} ?>
-				    </div>
-				    <p><?php the_excerpt(); ?></p>
-				    <div class="days-jailed">
-				    	DAYS IN JAIL: <span><?php echo days_in_jail(); ?></span>
-				    </div>
+	    	 		<?php 
+	    				if (has_post_thumbnail()) { 
+	        				$image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'optional-size' );
+	        				$url = $image_array[0]; ?>
+						    <div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;">
+				    		 	<h3>
+				    		 		<?php the_title(); ?>
+				    		 		<p><?php the_excerpt(); ?></p>
+				    		 		<div class="days-jailed">
+				    		 			<span><?php echo days_in_jail(); ?> DAYS IN JAIL</span>
+				    		 		</div>
+				    		 	</h3>
+						    </div>	    					
+	    				<?php }
+	    			?>
 				</div>
 		    </a>
 		<?php } 
