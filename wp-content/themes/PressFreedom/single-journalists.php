@@ -4,7 +4,7 @@
 
 	<div class="left-column">
 		<h1 class="title">
-			<?php the_title() ?><span class="country-name"> &#8211; <?php the_field("country"); ?></span>
+			<?php the_title() ?><span class="country-name"> &#8212; <?php the_field("country"); ?></span>
 		</h1>
 		<div class="article-header">
 			<?php 
@@ -56,8 +56,12 @@
 
 		<div class="social-share">
 			<i class="fa fa-facebook"></i>
-			<i class="fa fa-twitter"></i>
-			<i class="fa fa-envelope"></i>
+			<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+				<i class="fa fa-twitter"></i>
+			</a>
+			<a href="mailto:?Subject=<?php the_title(); ?>" target="_top">
+				<i class="fa fa-envelope"></i>
+			</a>
 		</div>
 
 		<?php if (have_posts()) : ?>
