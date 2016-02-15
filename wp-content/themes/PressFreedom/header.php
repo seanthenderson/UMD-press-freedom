@@ -3,6 +3,14 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
+	<!--===== FACEBOOK META =====-->
+	<meta property="og:url"           content="<?php the_permalink(); ?>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="<?php the_title(); ?>" />
+	<meta property="og:description"   content="<?php the_excerpt(); ?>" />
+	<meta property="og:image"         content="<?php the_post_thumbnail(); ?>" />
+
+	<!--===== PAGE TITLE =====-->
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 
 	<!--===== FONTS =====-->
