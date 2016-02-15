@@ -23,8 +23,12 @@
 
 				<div class="social-share">
 					<i class="fa fa-facebook"></i>
-					<i class="fa fa-twitter"></i>
-					<a href="mailto:?Subject=<?php the_title(); ?>" target="_top"><i class="fa fa-envelope"></i></a>
+					<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="mailto:?Subject=<?php the_title(); ?>" target="_top">
+						<i class="fa fa-envelope"></i>
+					</a>
 				</div>
 
 				<?php the_content(); ?>
