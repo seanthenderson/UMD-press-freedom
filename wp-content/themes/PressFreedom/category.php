@@ -30,8 +30,10 @@
 	     			 			} else { ?>
 	     			 				By <?php get_the_author();
 	     			 			} ?>
- 					 			<i class="fa fa-facebook-official"></i>
- 					 			<i class="fa fa-twitter-square"></i>
+ 					 			<a href=""><i class="fa fa-facebook-official"></i></a>
+		     					<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+		     						<i class="fa fa-twitter-square"></i>
+		     					</a>
  					 	 	</div>
  					 	 	<p><?php the_excerpt(); ?></p>
  					 	</div>
