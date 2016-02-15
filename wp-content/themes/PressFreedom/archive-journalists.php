@@ -60,28 +60,34 @@
 			 	if ($category->have_posts()) {
 			 		while ($category->have_posts()) {
 			 			$category->the_post(); ?>
-						<a href="<?php the_permalink(); ?>" class="journalist-card">	
-							
-					 		<?php if (has_post_thumbnail()) { 
-			    				$image_array = wp_get_attachment_image_src(\get_post_thumbnail_id( $page_id ), 'optional-size' );
-			    				$url = $image_array[0]; ?>
-								<div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;"></div> 
-							<?php } ?>
-							<div class="corner-days"><?php days_in_jail(); ?></div>
-							<div class="info">	
-								<h2 class="name"><?php the_title(); ?></h2>
-								<h3 class="country"><?php the_field("country"); ?></h3>
-								<div class="days-jailed">
-									<?php the_title(); ?> has been in prison for
-									<span><?php days_in_jail(); ?></span> days
-									in <?php the_field("country_where_imprisoned"); ?> for the crime of being a journalist
+			 			<div class="journalist-card">
+							<a href="<?php the_permalink(); ?>">	
+						 		<?php if (has_post_thumbnail()) { 
+				    				$image_array = wp_get_attachment_image_src(\get_post_thumbnail_id( $page_id ), 'optional-size' );
+				    				$url = $image_array[0]; ?>
+									<div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;"></div> 
+								<?php } ?>
+								<div class="corner-days"><?php days_in_jail(); ?></div>
+								<div class="info">	
+									<h2 class="name"><?php the_title(); ?></h2>
+									<h3 class="country"><?php the_field("country"); ?></h3>
+									<div class="days-jailed">
+										<?php the_title(); ?> has been in prison for
+										<span><?php days_in_jail(); ?></span> days
+										in <?php the_field("country_where_imprisoned"); ?> for the crime of being a journalist
+									</div>
 								</div>
-								<div class="social-media">	
+							</a>
+							<div class="social-media">	
+								<a href="">
 									<i class="fa fa-facebook"></i>
+								</a>
+								<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
 									<i class="fa fa-twitter"></i>
-								</div>
+								</a>
 							</div>
-						</a>
+						</div>
+							
 			 		<?php } 
 			 	} 
 			?>
