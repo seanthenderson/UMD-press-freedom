@@ -20,7 +20,7 @@
 						    <div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;">
 				    		 	<h3>
 				    		 		<?php the_title(); ?>
-				    		 		<p><?php the_excerpt(); ?></p>
+				    		 		<p><?php echo get_excerpt(250); ?></p>
 				    		 		<div class="days-jailed">
 				    		 			<span><?php echo days_in_jail(); ?> DAYS IN JAIL</span>
 				    		 		</div>
