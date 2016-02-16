@@ -35,7 +35,6 @@
 ?>
 <div class="ad sidebar-ad">300 x 250 AD</div>
 <div class="categories-list">
-	<h3>Key Categories</h3>
 	<?php wp_list_categories(); ?>					
 </div>
 <div class="related-links">
