@@ -16,7 +16,7 @@
 				</a>
 			</div>
 			<div class="social-icon">
-				<a href="<?php the_field('linkedin', 'user_'. $author_id); ?>" target="_blank" class="social-icon">
+				<a href="<?php the_field('linkedin', 'user_'. $author_id); ?>" target="_blank">
 					<i class="fa fa-linkedin"></i>
 				</a>
 			</div>
