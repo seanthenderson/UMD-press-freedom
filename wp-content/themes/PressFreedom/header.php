@@ -30,6 +30,7 @@
 				<i class="fa fa-bars"></i>
 				<div class="site-logo"><a href="/Press-Freedom">(SITE LOGO)</a></div>
 				<div class="nav">
+					<i class="fa fa-times"></i>
 					<?php wp_nav_menu('Header menu'); ?>
 				</div>
 				<div class="share-buttons">
