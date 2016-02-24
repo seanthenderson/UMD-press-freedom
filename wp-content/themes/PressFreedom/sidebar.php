@@ -1,4 +1,8 @@
 
+<div class="sidebar-info">	
+	<h2>Imprisoned Journalists</h2>
+	<p>Minim vivendo deterruisset no eam, at vis oratio vulputate consequuntur, vim oblique habemus eu <a href="<?php echo site_url(); ?>/journalists">Read More</a></p>
+</div>
 <?php 
 	$current_post = get_queried_object();
 	$args = array(
@@ -41,12 +45,21 @@
 	<?php $related = new WP_Query('pagename=related-links');
 		while ($related->have_posts()) :
 			$related->the_post(); ?>
-		    <h3><?php the_title(); ?></h3>
+		    <h2><?php the_title(); ?></h2>
 		    <div class="editors-pick">
 		    	<a href="<?php the_permalink(); ?>" target="_blank">
 		    		<?php the_content(); ?>
 		    	</a>
 		    </div>
+		<?php endwhile;
+	wp_reset_postdata(); ?>
+</div>
+<div class="about-site">
+	<?php $about = new WP_Query('pagename=about-this-site');
+		while ($about->have_posts()) :
+			$about->the_post(); ?>
+			<h2><?php the_title(); ?></h2>
+		    <p><?php the_content(); ?></p>
 		<?php endwhile;
 	wp_reset_postdata(); ?>
 </div>
