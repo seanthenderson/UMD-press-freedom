@@ -2,7 +2,7 @@
 <div class="page-wrapper category-page">
 
 	<div class="left-column">
-		<h1><?php single_cat_title(); ?></h1>
+		<h1 class="underlined"><?php single_cat_title(); ?></h1>
 		<?php 
 		 	$args = array(
 		 		'posts_per_page' => '4'
