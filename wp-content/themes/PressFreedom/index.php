@@ -69,7 +69,13 @@
 		?>
 
 		 <section class="press-uncuffed">
-		 	<h2>Feature Box for Press Uncuffed Campaign</h2>
+		 <?php $pressUncuffed = new WP_Query('pagename=press-uncuffed');
+		 		while ($pressUncuffed->have_posts()) :
+		 			$pressUncuffed->the_post(); ?>
+		 			<h2><?php the_title(); ?></h2>
+		 		    <p><?php the_content(); ?></p>
+		 		<?php endwhile;
+		 	wp_reset_postdata(); ?>
 		 </section>
 	</div>	
 
