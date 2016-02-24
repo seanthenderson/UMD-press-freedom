@@ -15,6 +15,7 @@
 		?>
 
 		<script src='http://maps.googleapis.com/maps/api/js?sensor=false' type='text/javascript'></script>
+		<p class="map-explainer">Lorem ipsum dolor sit amet, regione discere eos in, ei mel ludus epicuri vivendum, ne qui posse gloriatur</p>
 		<div id="full-map"></div>
 		
 		<script type="text/javascript">
@@ -92,9 +93,50 @@
 			 	} 
 			?>
 		</div>
+		<section class="press-uncuffed">
+		 	<?php $pressUncuffed = new WP_Query('pagename=press-uncuffed');
+		 		while ($pressUncuffed->have_posts()) :
+		 			$pressUncuffed->the_post(); ?>
+		 			<h2><?php the_title(); ?></h2>
+		 		    <p><?php the_content(); ?></p>
+		 		<?php endwhile;
+		 	wp_reset_postdata(); ?>
+		</section>
 	</div>
 
 	<div class="right-column">
+		<!-- Featured Stories -->
+		<h2 class="sidebar-featured-header">Featured Stories</h2>
+		<?php 
+			$current_post = get_queried_object();
+			$args = array(
+				'category_name' => 'sidebar-featured',
+		        'post__not_in' => [$current_post->ID],
+				'posts_per_page' => '2',
+			);
+			$sidebarFeatured = new WP_Query($args);
+			if ($sidebarFeatured->have_posts()) {
+				while ($sidebarFeatured->have_posts()) {
+					$sidebarFeatured->the_post(); ?>
+				    <a href="<?php the_permalink(); ?>">
+				    	<div class="sidebar-featured">
+			    	 		<?php 
+			    				if (has_post_thumbnail()) { 
+			        				$image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'optional-size' );
+			        				$url = $image_array[0]; ?>
+								    <div class="headshot" style="background: url('<?php echo $url; ?>') no-repeat center center; background-size: cover;">
+						    		 	<h3>
+						    		 		<?php the_title(); ?>
+						    		 		<p><?php echo get_excerpt(230); ?></p>
+						    		 	</h3>
+								    </div>	    					
+			    				<?php }
+			    			?>
+						</div>
+				    </a>
+				<?php } 
+			} 
+		?>
 		<?php get_sidebar(); ?>
 	</div>
 
