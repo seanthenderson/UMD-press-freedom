@@ -10,6 +10,13 @@
         'post__not_in' => [$current_post->ID],
 		'posts_per_page' => '2',
 		'orderby'       => 'rand',
+		'meta_query' => array(
+			array(
+				'key' => 'released',
+				'value' => '0',
+				'compare' => '=='
+			)
+		)
 	);
 	$sidebar = new WP_Query($args);
 	if ($sidebar->have_posts()) {

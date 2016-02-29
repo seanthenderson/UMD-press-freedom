@@ -19,7 +19,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Exo:900' rel='stylesheet' type='text/css'>
 	<!--===== STYLESHEETS ======-->
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
 
 	<?php wp_head(); ?>
 </head>

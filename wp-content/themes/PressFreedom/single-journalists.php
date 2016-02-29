@@ -18,9 +18,19 @@
 	
 		<div class="counter-map">
 			<div class="counter">
-			 	Days in jail: <span><?php echo days_in_jail(); ?></span>
+			 	<?php if ('yes' == get_field('released')) { ?>
+					Days in jail: <span><?php echo get_field('days_spent_in_jail'); ?></span>
+			 	<?php } else { ?>
+			 		Days in jail: <span><?php echo days_in_jail(); ?></span>
+			 	<?php } ?>
 			</div>
-			<div class="map-header"><?php the_title(); ?> is currently imprisoned in <?php the_field("country_where_imprisoned"); ?></div>
+			<div class="map-header">
+				<?php if ('yes' == get_field('released')) { ?>
+					<?php the_title(); ?> was imprisoned in <?php the_field("country_where_imprisoned"); ?>
+				<? } else if ('no' == get_field('released')) { ?>
+					<?php the_title(); ?> is currently imprisoned in <?php the_field("country_where_imprisoned"); ?>
+				<?php } ?>
+			</div>
 			
 			<?php
 				$location = get_field("link_to_map");
@@ -73,7 +83,7 @@
 		<?php include('includes/byline-box.php'); ?>
 
 		<section class="support-box">
-			<?php $support = new WP_Query('page_id=30');
+			<?php $support = new WP_Query('pagename=support-links');
 				while ( $support->have_posts() ) :
 					$support->the_post(); ?>
 				    <h2><?php the_title(); ?></h2>
@@ -86,7 +96,8 @@
 			<h2>Other Imprisoned Journalists</h2>
 			<?php $args = array(
 				'post_type' => 'journalists',
-				'posts_per_page' => '5'
+				'posts_per_page' => '5',
+				'orderby' => 'rand',
 			);
 			$other_journalists = new WP_Query($args);
 			if ($other_journalists->have_posts()) {
