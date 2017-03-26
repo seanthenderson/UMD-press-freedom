@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+/**
+* Template Name: Imprisoned Journalist
+**/
+get_header(); ?>
 
 <div class="page-wrapper imprisoned-journalist-page">
 
@@ -37,7 +41,6 @@
 
 				if( ! empty($location) ):?>
 					<div id="map"></div>
-					<script src='http://maps.googleapis.com/maps/api/js?sensor=false' type='text/javascript'></script>
 
 					<script type="text/javascript">
 						function load() {

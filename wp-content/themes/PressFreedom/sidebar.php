@@ -1,5 +1,6 @@
+<video controls="controls" width="300" height="175" name="Video Name" src="http://pressuncuffed.org/wp-content/uploads/2017/03/PressUncuffed_ClassVideo-Small.mov"></video>
 
-<div class="sidebar-info">	
+<div class="sidebar-info" style="display: none">	
 	<h2>Imprisoned Journalists</h2>
 	<p>Minim vivendo deterruisset no eam, at vis oratio vulputate consequuntur, vim oblique habemus eu <a href="<?php echo site_url(); ?>/journalists">Read More</a></p>
 </div>
@@ -23,7 +24,7 @@
 		while ($sidebar->have_posts()) {
 			$sidebar->the_post(); ?>
 		    <a href="<?php the_permalink(); ?>">
-		    	<div class="imprisoned-journalists-box">
+		    	<div class="imprisoned-journalists-box" style="display: none">
 	    	 		<?php 
 	    				if (has_post_thumbnail()) { 
 	        				$image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'optional-size' );

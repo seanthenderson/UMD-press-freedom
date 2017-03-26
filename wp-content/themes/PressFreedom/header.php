@@ -20,6 +20,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Exo:900' rel='stylesheet' type='text/css'>
 	<!--===== STYLESHEETS ======-->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
+	
+	<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBeriIOCFGsrFGFa8hzfm6S9GSBTiah4lY' type='text/javascript'></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -29,18 +31,30 @@
 		<header>
 			<div class="header-wrapper">
 				<i class="fa fa-bars"></i>
-				<div class="site-logo"><a href="/Press-Freedom">(SITE LOGO)</a></div>
+				<div class="site-logo"><a href="/">
+
+					<img src="http://pressuncuffed.org/wp-content/uploads/2017/03/press-uncuffed-logo.jpg" width="150">
+
+				</a></div>
 				<div class="nav">
 					<i class="fa fa-times"></i>
 					<?php wp_nav_menu('Header menu'); ?>
+					<div class="subhead">Students investigating press freedom in the US and abroad</div>
 				</div>
 				<div class="share-buttons">
+					<a href="http://merrill.umd.edu/" target="_blank"> 
+						<img class="merrill-logo" src="http://pressuncuffed.org/wp-content/uploads/2017/03/merrill-logo.png" alt="Merrill college logo" />
+					</a>
+
 					<a href=""><i class="fa fa-facebook"></i></a>
 					<a href=""><i class="fa fa-twitter"></i></a>
 					<a href=""><i class="fa fa-envelope"></i></a>
 					<i id="header-search" class="fa fa-search"></i>
 					<div class="search"><?php get_search_form(); ?></div>
 				</div>
+
 			</div>
 		</header>
+
+		<div id="under-construction">This site is currently under construction<img src="http://www.netanimations.net/animated_flashing_construction_barracade.gif" alt="construction" style="width: 35px; margin: -9px 0 -7px 14px" /></div>
 		

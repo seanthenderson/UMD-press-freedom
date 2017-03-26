@@ -14,7 +14,7 @@
 			$NUM = 0;
 		?>
 
-		<script src='http://maps.googleapis.com/maps/api/js?sensor=false' type='text/javascript'></script>
+		<!--<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBeriIOCFGsrFGFa8hzfm6S9GSBTiah4lY' type='text/javascript'></script>-->
 		<p class="map-explainer">Lorem ipsum dolor sit amet, regione discere eos in, ei mel ludus epicuri vivendum, ne qui posse gloriatur</p>
 		<div id="full-map"></div>
 		
