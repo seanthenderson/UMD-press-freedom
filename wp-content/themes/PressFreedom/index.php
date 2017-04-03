@@ -54,6 +54,7 @@
 			     			 			} else { ?>
 			     			 				By <?php get_the_author();
 			     			 			} ?>
+			     			 			<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar('small'); ?></a>
 			     			 		</div>
 			     					<a href=""><i class="fa fa-facebook-official"></i></a>
 			     					<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">

@@ -1,4 +1,6 @@
-<video controls="controls" width="300" height="175" name="Video Name" src="http://pressuncuffed.org/wp-content/uploads/2017/03/PressUncuffed_ClassVideo-Small.mov"></video>
+<!-- <video controls="controls" width="300" height="175" name="Video Name" src="http://pressuncuffed.org/wp-content/uploads/2017/03/PressUncuffed_ClassVideo-Small.mov"></video>
+ -->
+<img src="http://pressuncuffed.org/wp-content/uploads/2017/03/StudentsInClass_Video.png" width="100%" />
 
 <div class="sidebar-info" style="display: none">	
 	<h2>Imprisoned Journalists</h2>

@@ -42,9 +42,6 @@
 					<div class="subhead">Students investigating press freedom in the US and abroad</div>
 				</div>
 				<div class="share-buttons">
-					<a href="http://merrill.umd.edu/" target="_blank"> 
-						<img class="merrill-logo" src="http://pressuncuffed.org/wp-content/uploads/2017/03/merrill-logo.png" alt="Merrill college logo" />
-					</a>
 
 					<a href=""><i class="fa fa-facebook"></i></a>
 					<a href=""><i class="fa fa-twitter"></i></a>
@@ -52,7 +49,9 @@
 					<i id="header-search" class="fa fa-search"></i>
 					<div class="search"><?php get_search_form(); ?></div>
 				</div>
-
+				<a href="http://merrill.umd.edu/" target="_blank"> 
+					<img class="merrill-logo" src="http://pressuncuffed.org/wp-content/uploads/2017/03/merrill-logo.png" alt="Philip Merrill logo" />
+				</a>
 			</div>
 		</header>
 
