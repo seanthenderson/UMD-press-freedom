@@ -28,6 +28,9 @@
 
 		<!-- Featured stories -->
 		<?php 
+			$exclude = get_cat_ID('News');
+			$q = 'cat=-'.$exclude;
+			query_posts($q);
 			$args = array(
 				'category_name' => 'homepage-featured',
 				'category__not_in' => '6',
@@ -54,7 +57,9 @@
 			     			 			} else { ?>
 			     			 				By <?php get_the_author();
 			     			 			} ?>
-			     			 			<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar('small'); ?></a>
+			     			 			<?php foreach( get_coauthors() as $coauthor ) : ?>
+			     			 				<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar($coauthor->user_email, '50'); ?></a>
+			     			 			<?php endforeach; ?>
 			     			 		</div>
 			     					<a href=""><i class="fa fa-facebook-official"></i></a>
 			     					<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">

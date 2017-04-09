@@ -9,7 +9,7 @@
 		</h3>
 		<div class="headshot">
 			<?php $author_id = get_the_author_meta('ID'); ?>
-			<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar('small'); ?></a>
+			<?php echo get_avatar($coauthor->user_email, 'small'); ?>
 			<div class="social-icon"> 	
 				<a href="<?php the_field('twitter', 'user_'. $author_id); ?>" target="_blank">
 					<i class="fa fa-twitter"></i>
