@@ -30,7 +30,7 @@
 		<?php 
 			$args = array(
 				'category_name' => 'homepage-featured',
-				'category__not_in' => '5',
+				'category__not_in' => '6',
 				'posts_per_page' => '4'
 			);
 			$featured = new WP_Query($args);
