@@ -15,7 +15,7 @@
 		?>
 
 		<!--<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBeriIOCFGsrFGFa8hzfm6S9GSBTiah4lY' type='text/javascript'></script>-->
-		<p class="map-explainer">Lorem ipsum dolor sit amet, regione discere eos in, ei mel ludus epicuri vivendum, ne qui posse gloriatur</p>
+		<p class="map-explainer">Keep track of the journalists that Press Uncuffed reporters have covered</p>
 		<div id="full-map"></div>
 		
 		<script type="text/javascript">
