@@ -33,7 +33,7 @@
 				<i class="fa fa-bars"></i>
 				<div class="site-logo"><a href="/">
 
-					<img src="http://pressuncuffed.org/wp-content/uploads/2017/03/press-uncuffed-logo.jpg" width="150">
+					<img src="http://pressuncuffed.org/wp-content/uploads/2017/04/pu-logo.png">
 
 				</a></div>
 				<div class="nav">
