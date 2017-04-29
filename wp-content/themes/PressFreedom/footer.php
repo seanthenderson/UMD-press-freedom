@@ -1,6 +1,9 @@
 			</div>
 			<footer>
 				<div class="copyright">&copy; Philip Merrill College of Journalism</div>
+				<a href="http://merrill.umd.edu/" target="_blank"> 
+					<img id="footerMerrill" class="merrill-logo" src="http://pressuncuffed.org/wp-content/uploads/2017/03/merrill-logo.png" alt="Philip Merrill logo" />
+				</a>
 				<?php wp_footer(); ?>
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 				<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js" type="text/javascript"></script>
