@@ -22,6 +22,25 @@
 							</div>
 				    	</div>
 				    </a>
+				    <div class="article-text">
+				     	<div class="byline">
+				     		<div class="featured-text-byline">
+				     			<?php if(function_exists('coauthors_posts_links')) { ?>
+				     				By <?php coauthors_posts_links('display_name'); 
+				     			} else { ?>
+				     				By <?php get_the_author();
+				     			} ?>
+				     			<?php foreach( get_coauthors() as $coauthor ) : ?>
+				     				<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar($coauthor->user_email, '50'); ?></a>
+				     			<?php endforeach; ?>
+				     		</div>
+				    		<a href=""><i class="fa fa-facebook-official"></i></a>
+				    		<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+				    			<i class="fa fa-twitter-square"></i>
+				    		</a>
+				     	</div>
+				     	<p><?php the_excerpt(); ?></p>
+				    </div>
 				<?php } 
 			} 
 		?>
