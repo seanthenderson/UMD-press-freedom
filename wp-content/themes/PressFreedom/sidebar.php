@@ -45,7 +45,6 @@
 		<?php } 
 	} 
 ?>
-<div class="ad sidebar-ad">300 x 250 AD</div>
 <div class="categories-list">
 	<?php wp_list_categories(); ?>					
 </div>
