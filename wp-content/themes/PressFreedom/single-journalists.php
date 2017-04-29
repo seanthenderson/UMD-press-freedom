@@ -123,9 +123,9 @@ get_header(); ?>
 			} ?>
 		</div>
 
-		<section class="sharelines">
+		<!--<section class="sharelines">
 			<h2>Twitter Sharelines</h2>
-		</section> 
+		</section>-->
 	</div>	
 
 	<div class="right-column">
