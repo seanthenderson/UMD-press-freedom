@@ -43,8 +43,8 @@
 				</div>
 				<div class="share-buttons">
 
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
+					<a href="https://www.facebook.com/pressuncuffed/" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/pressuncuffed?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
 					<a href=""><i class="fa fa-envelope"></i></a>
 					<i id="header-search" class="fa fa-search"></i>
 					<div class="search"><?php get_search_form(); ?></div>
