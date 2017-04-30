@@ -1,5 +1,12 @@
 <iframe width="300" height="180" src="https://www.youtube.com/embed/Orok7N9I0wU?rel=0" frameborder="0" allowfullscreen></iframe>
 
+<div class="sidebar-info">
+	<h2>Campaign</h2>
+	<a href="/donations" target="_blank">
+	<img src="http://pressuncuffed.org/wp-content/uploads/2017/04/Screen-Shot-2017-04-24-at-11.48.12.png" alt="buy a bracelet press uncuffed campaign image" width="100%" />
+	</a>
+</div>
+
 <div class="sidebar-info" style="display: none">	
 	<h2>Imprisoned Journalists</h2>
 	<p>Minim vivendo deterruisset no eam, at vis oratio vulputate consequuntur, vim oblique habemus eu <a href="<?php echo site_url(); ?>/journalists">Read More</a></p>
@@ -53,6 +60,19 @@
 		while ($related->have_posts()) :
 			$related->the_post(); ?>
 		    <h2><?php the_title(); ?></h2>
+		    <div class="editors-pick">
+		    	<a href="<?php the_permalink(); ?>" target="_blank">
+		    		<?php the_content(); ?>
+		    	</a>
+		    </div>
+		<?php endwhile;
+	wp_reset_postdata(); ?>
+</div>
+<div class="related-links">
+	<?php $related = new WP_Query('pagename=teaching-resources-sidebar');
+		while ($related->have_posts()) :
+			$related->the_post(); ?>
+		    <h2>Teaching Resources</h2>
 		    <div class="editors-pick">
 		    	<a href="<?php the_permalink(); ?>" target="_blank">
 		    		<?php the_content(); ?>
