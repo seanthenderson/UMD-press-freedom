@@ -15,7 +15,7 @@
 		<h1><?php echo $curauth->display_name; ?></h1>
 		<div class="avatar">
 			<?php foreach( get_coauthors() as $coauthor ) : ?>
- 				<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar($coauthor->user_email, '50'); ?></a>
+ 				<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar($coauthor->user_email, '250'); ?></a>
  			<?php endforeach; ?>
 		</div>
 		<p class="bio"><?php the_author_description(); ?></p>
