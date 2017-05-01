@@ -34,10 +34,7 @@
 				     				<a href="<?php echo $coauthor->user_url; ?>"><?php echo get_avatar($coauthor->user_email, '50'); ?></a>
 				     			<?php endforeach; ?>
 				     		</div>
-				    		<a href="https://twitter.com/share?text=<?php the_title(); ?>" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-			     			 	<i class="fa fa-twitter-square"></i>
-			     			 </a>
-			     			<div class="fb-share-button" data-href="<?php the_permalink(); ?>"></div>
+				    		<?php include('includes/social-shares.php'); ?>
 				     	</div>
 				     	<p><?php the_excerpt(); ?></p>
 				    </div>
