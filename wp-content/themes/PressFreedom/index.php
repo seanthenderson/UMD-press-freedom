@@ -72,7 +72,7 @@
 		<?php 
 			$args = array(
 				'category_name' => 'research',
-				'posts_per_page' => '10'
+				'posts_per_page' => '5'
 			);
 			$research = new WP_Query($args);
 			if ($research->have_posts()) {
