@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($){
 	// Header search
 	$x = 0;
 	$('#header-search').click(function() {
@@ -31,7 +31,20 @@ $(document).ready(function() {
 	$('header .header-wrapper .nav .fa-times').click(function() {
 		$('header .header-wrapper .nav').animate({'margin-left': '-500px'});
 	});
+
+	// Toggle homepage changes
+	$('#changeToggle').on('click', function() {
+		$('.page-wrapper.homepage').toggleClass('updates');
+	});
+
+	// Remove empty <p> tags in homepage center column
+	$('.center-column p').each(function() {
+		if ($(this).is(':empty')) {
+			$(this).hide();
+	    }
+	});
 });
+
 // Facebook share button
 window.fbAsyncInit = function(){
 FB.init({

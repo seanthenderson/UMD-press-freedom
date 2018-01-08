@@ -1,7 +1,7 @@
 			</div>
 			<footer>
 				<div class="copyright">&copy; Philip Merrill College of Journalism</div>
-				<a href="http://merrill.umd.edu/" target="_blank"> 
+				<a href="http://cnsmaryland.org/home" target="_blank"> 
 					<img id="footerCNS" class="merrill-logo" src="http://pressuncuffed.org/wp-content/uploads/2017/04/cns-logo-final-hr.png" alt="Capital News Service logo" />
 				</a>
 				<?php wp_footer(); ?>

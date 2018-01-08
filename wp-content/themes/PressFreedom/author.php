@@ -19,12 +19,6 @@
  			<?php endforeach; ?>
 		</div>
 		<p class="bio"><?php the_author_description(); ?></p>
-		<a href="<?php the_field('twitter', 'user_'. $author); ?>" target="_blank">
-			<i class="fa fa-twitter"></i>
-		</a>
-		<a href="<?php the_field('linkedin', 'user_'. $author); ?>" target="_blank" class="social-icon">
-			<i class="fa fa-linkedin"></i>
-		</a>
 
 		<h3>Stories by <?php echo $curauth->display_name; ?>:</h3>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -5,8 +5,9 @@
 		<h1 class="underlined"><?php single_cat_title(); ?></h1>
 		<?php 
 		 	$args = array(
-		 		'posts_per_page' => '4'
+		 		'posts_per_page' => '40',
 		 	);
+		 	$args['cat'] = get_query_var('cat');
 		 	$category = new WP_Query($args);
 		 	if ($category->have_posts()) {
 		 		while ($category->have_posts()) {

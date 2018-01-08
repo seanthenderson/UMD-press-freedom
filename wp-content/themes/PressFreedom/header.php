@@ -8,7 +8,7 @@
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="<?php the_title(); ?>" />
 	<meta property="og:description"   content="<?php the_excerpt(); ?>" />
-	<meta property="og:image"         content="<?php the_post_thumbnail(); ?>" />
+	<meta property="og:image"         content="<?php the_post_thumbnail_url(); ?>" />
 
 	<!--===== PAGE TITLE =====-->
 	<title><?php wp_title(''); ?> | Press Uncuffed</title>
@@ -45,7 +45,6 @@
 
 					<a href="https://www.facebook.com/pressuncuffed/" target="_blank"><i class="fa fa-facebook"></i></a>
 					<a href="https://twitter.com/pressuncuffed?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-envelope"></i></a>
 					<i id="header-search" class="fa fa-search"></i>
 					<div class="search"><?php get_search_form(); ?></div>
 				</div>
